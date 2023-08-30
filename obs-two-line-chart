@@ -1,0 +1,16 @@
+Plot.plot({
+  x: { label: "Day of Month" },
+  y: { label: "Stand Hours", grid: false, domain: [0, 24]},
+  color: {legend: true},
+  
+  marks: [
+    Plot.line(data, { x: "Day #", y: "Stand", stroke: "#fb8500", strokeWidth: 4, legend: true }),
+    Plot.line(data, { x: "Day #", y: "Average Stand Hours Before", stroke: "#8ecae6", strokeWidth: 2 })
+  ],
+  legend: {align: "right", 
+          entries: [
+            {label: "Standing with Baby", color: "#fb8500"},
+            {label: "Standing Before Baby", color: "#8ecae6"}]},
+title: "Standing with Baby"  ,
+subtitle: "apple watch stand hours"
+})
